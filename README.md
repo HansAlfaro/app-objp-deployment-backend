@@ -2,18 +2,13 @@
 
 API REST en Node.js + Express para el sistema de objetos perdidos del campus:
 catálogo de objetos encontrados, reclamos de alumnos y gestión de usuarios.
-Sigue la misma arquitectura usada en clase (`route → middleware → controller →
+Sigue la arquitectura (`route → middleware → controller →
 service → repository → model`, con Sequelize + PostgreSQL).
-
-> **Estado actual:** el código está listo para conectarse a una base de datos,
-> pero la base de datos todavía **no ha sido creada**. Sigue los pasos de
-> "Puesta en marcha" cuando quieras conectarla.
 
 ## Stack
 - Node con ESM (`"type": "module"`)
 - Express 5
 - Sequelize + pg (PostgreSQL)
-- jsonwebtoken, bcryptjs
 - body-parser, cors, dotenv
 - nodemon en dev
 
@@ -112,7 +107,3 @@ Las respuestas de reclamos vienen enriquecidas con `objetoNombre` y `alumnoCodig
 | 20220890    | 1234     | student | sí     |
 | 20210055    | 1234     | student | no     |
 
-## Pendiente / próximos pasos
-- Conectar el frontend a estos endpoints (reemplazar el estado local de `App.jsx` por llamadas `fetch`/`axios` a esta API).
-- Crear la base de datos real y ejecutar `npm run migrate` contra ella.
-- Definir `JWT_SECRET` seguro en el entorno de despliegue.
